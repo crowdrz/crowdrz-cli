@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 
-const Crowdrz = require('../../../crowdrz-js/dist/Crowdrz');
+const Crowdrz = require('../../../crowdrz-js/index');
 
 const ora = require('ora');
 
@@ -33,7 +33,7 @@ async function promptMissingOptions() {
 
 module.exports = async function() {
   await promptMissingOptions();
-  let crowdrz = new Crowdrz('facebook', 'EAAGnFkxIcgQBADZBgioP6RQblT25BsZC57HbOp1LpvbnfMZBHgsQvZCuZAadjWQhBdQ5sHZAc6Jx07ZBm1ZC6siZA4NvRaxffoZAOOzKu2uy7SGZA7GJiXedqosdZBewjDJORhjUZC8wllUsvGfQxdyEtOldN5GZCXBBfsHB7T7dW4eqo0Uqo0I4DssK2oenOjyjHdDWsEbpZCSRvYaFgZDZD');
+  let crowdrz = new Crowdrz('facebook', 'EAAGnFkxIcgQBALyw2vjF9ZBQL13Vmgs6eVEyqIRuZBwmV7EU31Ct5tAH8ZBJjGXkyVtbC1xma5e76tkNTUa48gfmEk8gsRsdCZAMckWDKh12pEJZAACk0jpnsLQrjpjmqmt8ovnPvskcJdUfFikMQ16qzkj6xxImQlNZAFDkCSaZCGsNEn79FxpEolBXm3ZCIC42iRkmZCi41ugZDZD');
   let comments = crowdrz.applyProcess('getComments', '1537872846355561');
 }
 
